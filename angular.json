@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CourseLACoursesAngularMaterialApp"
+    }
+  },
+  "defaultProject": "CourseLACoursesAngularMaterialApp",
+  "cli": {
+    "analytics": "7574a24c-5c6c-4314-a4ab-a4a441ef13e3"
+  }
 }
