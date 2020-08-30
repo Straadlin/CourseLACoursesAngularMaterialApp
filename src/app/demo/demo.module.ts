@@ -8,6 +8,7 @@ import { Table2Component } from './table2/table2.component';
 import { TreeComponent } from './tree/tree.component';
 import { MaterialModule } from '../material/material.module';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { IconsComponent } from './icons/icons.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
     TableComponent,
     Table2Component,
     TreeComponent,
-    ButtonsComponent
+    ButtonsComponent,
+    IconsComponent
   ],
   imports: [
     CommonModule,
