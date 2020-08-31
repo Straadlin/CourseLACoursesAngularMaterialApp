@@ -15,6 +15,11 @@
         <mat-option value="javascript">JavScript</mat-option>
       </mat-select>
     </mat-form-field>
+    <mat-form-field><!-- This is the Wrapper -->
+      <input matInput [matDatepicker]="startDate" placeholder="Start date">
+      <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
+      <mat-datepicker #startDate></mat-datepicker>
+    </mat-form-field>
   </div>
 </mat-card>
 
