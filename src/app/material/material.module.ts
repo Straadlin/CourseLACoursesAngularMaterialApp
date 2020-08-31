@@ -11,6 +11,8 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTreeModule } from '@angular/material/tree';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [],
@@ -25,7 +27,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTreeModule
+    MatTreeModule,
+    MatSidenavModule,
+    MatListModule
   ],
   exports:[
     CommonModule,
@@ -38,7 +42,9 @@ import { MatIconModule } from '@angular/material/icon';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatTreeModule
+    MatTreeModule,
+    MatSidenavModule,
+    MatListModule
   ]
 })
 export class MaterialModule { }
