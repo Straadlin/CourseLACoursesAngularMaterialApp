@@ -14,6 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [],
@@ -31,7 +32,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatTreeModule,
     MatSidenavModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule
   ],
   exports:[
     CommonModule,
@@ -47,7 +49,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatTreeModule,
     MatSidenavModule,
     MatListModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule
   ]
 })
 export class MaterialModule { }

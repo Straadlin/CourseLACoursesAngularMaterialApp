@@ -9,7 +9,7 @@ const routes: Routes = [
     component: CoursesManagerComponent,
     children: [
       {
-        path: 'add', // courses-manager/add
+        path: 'add', // /manager/add
         component: CourseAddComponent
       }
     ]
