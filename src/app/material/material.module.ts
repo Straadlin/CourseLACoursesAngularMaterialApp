@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [],
@@ -33,7 +34,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   exports:[
     CommonModule,
@@ -50,7 +52,8 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     MatListModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }
