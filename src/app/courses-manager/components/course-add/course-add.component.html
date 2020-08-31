@@ -32,6 +32,11 @@
     <mat-radio-button value="active">Active</mat-radio-button>
     <mat-radio-button value="inactive">Inactive</mat-radio-button>
   </mat-radio-group>
+
+  <section class="slider">
+    <span>Course Level</span>
+    <mat-slider [min]="0" [max]="10" [step]="1" [thumbLabel]="true" [tickInterval]="1"></mat-slider>
+  </section>
   </div>
 </mat-card>
 
