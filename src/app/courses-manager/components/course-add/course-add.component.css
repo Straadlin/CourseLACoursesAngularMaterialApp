@@ -5,8 +5,13 @@
 
 .categories{
   display: flex;
+  height: 40px;
 }
 
 .category{
+  margin-right: 10px;
+}
+
+mat-radio-button{
   margin-right: 10px;
 }
