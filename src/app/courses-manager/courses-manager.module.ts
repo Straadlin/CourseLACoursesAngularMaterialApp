@@ -5,10 +5,11 @@ import { CoursesManagerRoutingModule } from './courses-manager-routing.module';
 import { CoursesManagerComponent } from './courses-manager.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { MaterialModule } from '../material/material.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 
 @NgModule({
-  declarations: [CoursesManagerComponent, SidenavComponent],
+  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent],
   imports: [
     CommonModule,
     CoursesManagerRoutingModule,
