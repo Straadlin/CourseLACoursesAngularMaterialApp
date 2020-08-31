@@ -15,11 +15,18 @@
         <mat-option value="javascript">JavScript</mat-option>
       </mat-select>
     </mat-form-field>
-    <mat-form-field><!-- This is the Wrapper -->
+    <mat-form-field><!-- This is the Wrapper Component -->
       <input matInput [matDatepicker]="startDate" placeholder="Start date">
       <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
       <mat-datepicker #startDate></mat-datepicker>
     </mat-form-field>
+
+    <section class="categories">
+      <mat-checkbox class="category">Angular</mat-checkbox>
+      <mat-checkbox class="category">JavaScript</mat-checkbox>
+      <mat-checkbox class="category">Web</mat-checkbox>
+      <mat-checkbox class="category">Mobile</mat-checkbox>
+  </section>
   </div>
 </mat-card>
 
