@@ -8,10 +8,11 @@ import { MaterialModule } from '../material/material.module';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CourseAddComponent } from './components/course-add/course-add.component';
 import { FormsModule } from '@angular/forms';
+import { CourseListComponent } from './components/course-list/course-list.component';
 
 
 @NgModule({
-  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent],
+  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent, CourseListComponent],
   imports: [
     CommonModule,
     CoursesManagerRoutingModule,
