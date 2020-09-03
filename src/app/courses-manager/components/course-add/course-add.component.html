@@ -4,33 +4,34 @@
   </mat-card-title>
   <div class="form-container">
     <mat-form-field>
-      <input matInput placeholder="Name">
+      <input matInput placeholder="Name" [(ngModel)] = "course.name">
     </mat-form-field>
     <mat-form-field>
-      <textarea matInput placeholder="Description"></textarea>
+      <textarea matInput placeholder="Description" [(ngModel)] = "course.description"></textarea>
     </mat-form-field>
     <mat-form-field>
-      <mat-select placeholder="Speciality">
+      <mat-select placeholder="Speciality" [(ngModel)] = "course.speciality">
         <mat-option value="angular">Angular</mat-option>
         <mat-option value="javascript">JavScript</mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field><!-- This is the Wrapper Component -->
-      <input matInput [matDatepicker]="startDate" placeholder="Start date">
+      <input matInput [matDatepicker]="startDate" placeholder="Start date"  [(ngModel)] = "course.startDate">
       <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
       <mat-datepicker #startDate></mat-datepicker>
     </mat-form-field>
 
     <section class="categories">
-      <mat-checkbox class="category">Angular</mat-checkbox>
-      <mat-checkbox class="category">JavaScript</mat-checkbox>
-      <mat-checkbox class="category">Web</mat-checkbox>
-      <mat-checkbox class="category">Mobile</mat-checkbox>
+      <mat-checkbox *ngFor = "let category of categories"
+                    class = "category"
+                    [(ngModel)] = "category.checked">
+        {{category.name}}
+      </mat-checkbox>
   </section>
 
-  <mat-radio-group>
-    <mat-radio-button value="active">Active</mat-radio-button>
-    <mat-radio-button value="inactive">Inactive</mat-radio-button>
+  <mat-radio-group [(ngModel)] = "course.isActive">
+    <mat-radio-button [value] = "true">Active</mat-radio-button>
+    <mat-radio-button [value] = "false">Inactive</mat-radio-button>
   </mat-radio-group>
 
   <section class="slider">
@@ -38,6 +39,14 @@
     <mat-slider [min]="0" [max]="10" [step]="1" [thumbLabel]="true" [tickInterval]="1"></mat-slider>
   </section>
   </div>
+  <mat-card-actions>
+    <button mat-raised-button
+            color="primary"
+            (click)="save()">
+      Save
+    </button>
+    <button mat-raised-button>Cancel</button>
+  </mat-card-actions>
 </mat-card>
 
 
