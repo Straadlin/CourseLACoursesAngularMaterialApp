@@ -6,5 +6,5 @@ export interface Course{
   startDate?: string;
   categories?: string[];
   isActive?: boolean;
-  leveñ?: number;
+  level?: number;
 }

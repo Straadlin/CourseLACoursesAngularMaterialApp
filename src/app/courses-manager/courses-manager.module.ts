@@ -9,10 +9,11 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { CourseAddComponent } from './components/course-add/course-add.component';
 import { FormsModule } from '@angular/forms';
 import { CourseListComponent } from './components/course-list/course-list.component';
+import { CardsComponent } from './components/course-list/cards/cards.component';
 
 
 @NgModule({
-  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent, CourseListComponent],
+  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent, CourseListComponent, CardsComponent],
   imports: [
     CommonModule,
     CoursesManagerRoutingModule,
