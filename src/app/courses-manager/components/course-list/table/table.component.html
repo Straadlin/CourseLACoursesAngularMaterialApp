@@ -1,3 +1,10 @@
+<mat-form-field>
+  <input name = "filter"
+         matInput
+         placeholder = "Filter"
+         (keyup) = "applyFilter($event.target.value)">
+</mat-form-field>
+
 <table mat-table [dataSource] = "dataSource">
   <ng-container [matColumnDef] = "column" *ngFor = "let column of displayedColumns">
     <th mat-header-cell *matHeaderCellDef>{{column}}</th>
