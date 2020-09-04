@@ -15,3 +15,9 @@
   <tr mat-row *matRowDef = "let row; columns: displayedColumns;"></tr>
 
 </table>
+
+<mat-paginator [length] = "dataSource?.data.length"
+               [pageIndex] = "0"
+               [pageSize] = "2"
+               [pageSizeOptions] = "[2, 4, 6, 8]"
+               showFirstLastButtons></mat-paginator>
