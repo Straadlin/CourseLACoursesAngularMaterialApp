@@ -12,10 +12,11 @@ import { CourseListComponent } from './components/course-list/course-list.compon
 import { CardsComponent } from './components/course-list/cards/cards.component';
 import { LisComponent } from './components/course-list/lis/lis.component';
 import { TreeComponent } from './components/course-list/tree/tree.component';
+import { ExpansionComponent } from './components/course-list/expansion/expansion.component';
 
 
 @NgModule({
-  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent, CourseListComponent, CardsComponent, LisComponent, TreeComponent],
+  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent, CourseListComponent, CardsComponent, LisComponent, TreeComponent, ExpansionComponent],
   imports: [
     CommonModule,
     CoursesManagerRoutingModule,
