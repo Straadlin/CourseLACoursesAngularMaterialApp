@@ -2,7 +2,8 @@
   <input name = "filter"
          matInput
          placeholder = "Filter"
-         (keyup) = "applyFilter($event.target.value)">
+         (keyup) = "applyFilter($event.target.value)"
+         matTooltip = "Enter text to filter in table">
 </mat-form-field>
 
 <table mat-table [dataSource] = "dataSource">
