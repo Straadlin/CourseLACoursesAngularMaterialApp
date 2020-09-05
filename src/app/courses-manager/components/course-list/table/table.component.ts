@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { CourseEditComponent } from '../../course-edit/course-edit.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-table',
@@ -21,7 +22,8 @@ export class TableComponent implements OnInit {
   paginator: MatPaginator;
 
   constructor(private courseService: CourseService,
-    private dialog: MatDialog) { }
+    private dialog: MatDialog,
+    private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -52,6 +54,10 @@ export class TableComponent implements OnInit {
       }
 
       course =  result;
+
+      this.snackBar.open('Course was updated.', 'Close', {
+        duration: 3000
+      });
     });
   }
 }
