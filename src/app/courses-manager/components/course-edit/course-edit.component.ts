@@ -19,8 +19,11 @@ export class CourseEditComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  edit() {
-
+  update() {
+    this.dialogRef.close(this.course);
   }
 
+  cancel() {
+    this.dialogRef.close();
+  }
 }

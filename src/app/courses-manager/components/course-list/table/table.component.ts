@@ -41,9 +41,17 @@ export class TableComponent implements OnInit {
   }
 
   openDialog(course: Course) {
-    this.dialog.open(CourseEditComponent, {
+    const dialogRef = this.dialog.open(CourseEditComponent, {
       width: '600px',
       data: course
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(!result){
+        console.log('Dialog was closed.');
+      }
+
+      course =  result;
     });
   }
 }
