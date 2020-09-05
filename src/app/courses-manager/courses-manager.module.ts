@@ -14,10 +14,12 @@ import { LisComponent } from './components/course-list/lis/lis.component';
 import { TreeComponent } from './components/course-list/tree/tree.component';
 import { ExpansionComponent } from './components/course-list/expansion/expansion.component';
 import { TableComponent } from './components/course-list/table/table.component';
+import { CourseEditComponent } from './components/course-edit/course-edit.component';
 
 
 @NgModule({
-  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent, CourseListComponent, CardsComponent, LisComponent, TreeComponent, ExpansionComponent, TableComponent],
+  entryComponents: [CourseEditComponent],
+  declarations: [CoursesManagerComponent, SidenavComponent, ToolbarComponent, CourseAddComponent, CourseListComponent, CardsComponent, LisComponent, TreeComponent, ExpansionComponent, TableComponent, CourseEditComponent],
   imports: [
     CommonModule,
     CoursesManagerRoutingModule,

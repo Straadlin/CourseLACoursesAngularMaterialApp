@@ -3,6 +3,8 @@ import { CourseService } from 'src/app/courses-manager/services/course.service';
 import { Course } from 'src/app/courses-manager/models/course';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { CourseEditComponent } from '../../course-edit/course-edit.component';
 
 @Component({
   selector: 'app-table',
@@ -18,7 +20,8 @@ export class TableComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true})
   paginator: MatPaginator;
 
-  constructor(private courseService: CourseService) { }
+  constructor(private courseService: CourseService,
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
@@ -30,5 +33,17 @@ export class TableComponent implements OnInit {
 
   applyFilter(text: string) {
     this.dataSource.filter = text.trim().toLocaleLowerCase();
+  }
+
+  edit(course: Course) {
+    console.log('Edit', course);
+    this.openDialog(course);
+  }
+
+  openDialog(course: Course) {
+    this.dialog.open(CourseEditComponent, {
+      width: '600px',
+      data: course
+    });
   }
 }
